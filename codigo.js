@@ -7,7 +7,7 @@ function registrar() {
 
     if (user == "" || contra == "") {
 
-        mensaje.textContent = "¡Por favor, complete todos los campos!";
+        mensaje.textContent = "Completa todos los campos";
         mensaje.style.color = "red";
 
     } else {
@@ -15,11 +15,11 @@ function registrar() {
         localStorage.setItem("usuario", user);
         localStorage.setItem("contrasena", contra);
 
-        mensaje.textContent = "¡Registro exitoso! Redirigiendo a la página de inicio de sesión...";
-        mensaje.style.color = "green";
+        mensaje.textContent = "¡Registro exitoso!";
+        mensaje.style.color = "purple";
 
         setTimeout(function() {
-            location.href = "registro.html";
+            location.href = "index.html";
         }, 1000);
     }
 }
@@ -27,20 +27,34 @@ function registrar() {
 
 function iniciarSesion() {
 
-    let usuario = document.getElementById("usuario").value;
-    let contrasena = document.getElementById("contrasena").value;
-
-    let usuarioGuardado = localStorage.getItem("usuario");
-    let contrasenaGuardada = localStorage.getItem("contrasena");
+    let user = document.getElementById("user").value;
+    let contra = document.getElementById("contra").value;
 
     let mensaje = document.getElementById("mensaje");
 
-    if (usuario == usuarioGuardado &&
-        contrasena == contrasenaGuardada) {
+    
+    let usuarioRegistrado = localStorage.getItem("user");
+    let contrasenaRegistrada = localStorage.getItem("contra");
 
-        location.href = "index.html";
+    if (user == "" || contra == "") {
 
-    } else {
+        mensaje.textContent = "Ingresa tu usuario y contraseña";
+        mensaje.style.color = "purple";
+
+    } 
+   
+    else if (user == usuarioRegistrado && contra == contrasenaRegistrada) {
+
+        mensaje.textContent = "¡Inicio de sesión exitoso!";
+        mensaje.style.color = "purple";
+
+        setTimeout(function() {
+            location.href = "bienvenido.html";
+        }, 1000);
+
+    } 
+    
+    else {
 
         mensaje.textContent = "Usuario o contraseña incorrectos";
         mensaje.style.color = "red";
