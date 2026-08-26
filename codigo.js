@@ -7,7 +7,7 @@ function registrar() {
 
     if (user == "" || contra == "") {
 
-        mensaje.textContent = "Completa todos los campos";
+        mensaje.textContent = "¡Por favor, complete todos los campos!";
         mensaje.style.color = "red";
 
     } else {
@@ -15,7 +15,7 @@ function registrar() {
         localStorage.setItem("usuario", user);
         localStorage.setItem("contrasena", contra);
 
-        mensaje.textContent = "Usuario creado correctamente";
+        mensaje.textContent = "¡Registro exitoso! Redirigiendo a la página de inicio de sesión...";
         mensaje.style.color = "green";
 
         setTimeout(function() {
