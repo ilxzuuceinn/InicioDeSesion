@@ -19,7 +19,7 @@ function registrar() {
         mensaje.style.color = "green";
 
         setTimeout(function() {
-            location.href = "login.html";
+            location.href = "registro.html";
         }, 1000);
     }
 }
@@ -38,7 +38,7 @@ function iniciarSesion() {
     if (usuario == usuarioGuardado &&
         contrasena == contrasenaGuardada) {
 
-        location.href = "pagina.html";
+        location.href = "index.html";
 
     } else {
 
