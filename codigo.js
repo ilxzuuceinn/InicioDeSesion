@@ -1,17 +1,13 @@
 function registrar() {
-
     let usuario = document.getElementById("nuevoUsuario").value;
     let contrasena = document.getElementById("nuevaContrasena").value;
-
     let mensaje = document.getElementById("mensaje");
-
+    
+    
     if (usuario == "" || contrasena == "") {
-
         mensaje.textContent = "Completa todos los campos";
         mensaje.style.color = "red";
-
     } else {
-
         localStorage.setItem("usuario", usuario);
         localStorage.setItem("contrasena", contrasena);
         mensaje.textContent = "¡Registro exitoso!";
@@ -24,7 +20,6 @@ function registrar() {
 
 
 function iniciarSesion() {
-
     let usuario = document.getElementById("usuario").value;
     let contrasena = document.getElementById("contrasena").value;
     let mensaje = document.getElementById("mensaje");
