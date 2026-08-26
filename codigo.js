@@ -5,7 +5,7 @@ function registrar() {
     
     
     if (usuario == "" || contrasena == "") {
-        mensaje.textContent = "Completa todos los campos";
+        mensaje.textContent = "¡Completa todo!";
         mensaje.style.color = "red";
     } else {
         mensaje.textContent = "¡Registro exitoso!";
@@ -19,7 +19,7 @@ function iniciarSesion() {
     let contrasena = document.getElementById("contrasena").value;
     let mensaje = document.getElementById("mensaje");
     if (usuario == "" || contrasena == "") {
-        mensaje.textContent = "Ingresa tu usuario y contraseña";
+        mensaje.textContent = "¡Ingresa tu usuario y contraseña!";
         mensaje.style.color = "red";
     } 
    
