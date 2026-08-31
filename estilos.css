@@ -11,6 +11,9 @@ h1{
     margin: 0 auto;
     margin-top: 20px;
 }
+.primera{
+    display: flex;
+}
 .principal{
     width: 400px;
     height: 300px;
