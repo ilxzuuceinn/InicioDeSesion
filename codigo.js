@@ -8,6 +8,7 @@ function registrar() {
     if (user === "" || contra === "") {
         mensaje.textContent = "¡Completa todos los campos!";
         mensaje.style.color = "red";
+        return; 
     } 
 
     let yaExiste = false;
@@ -32,14 +33,15 @@ function registrar() {
     }
 }
 
-
 function iniciarSesion() {
     let user = document.getElementById("usuario").value;
     let contra = document.getElementById("contrasena").value;
     let mensaje = document.getElementById("mensaje");
+
     if (user === "" || contra === "") {
         mensaje.textContent = "¡Ingresa tu usuario y contraseña!";
         mensaje.style.color = "red";
+        return;
     } 
 
     let opcionesValidas = false;
