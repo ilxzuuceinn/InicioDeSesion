@@ -49,8 +49,8 @@ function iniciarSesion(){
     let mensaje = document.getElementById("mensaje");
 
     if (user === "" || contra === "") {
-        mensaje.textContent = "¡Ingresa tu usuario y contraseña!";
-        mensaje.style.color = "red";
+        mensaje2.textContent = "¡Ingresa tu usuario y contraseña!";
+        mensaje2.style.color = "red";
         return;
 
     } 
