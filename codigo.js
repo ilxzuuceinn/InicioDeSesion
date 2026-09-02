@@ -6,8 +6,13 @@ function registrar() {
     let mensaje1 = document.getElementById("mensaje1");
 
     if (user === "" || contra === "") {
+
         mensaje1.textContent = "¡Completa todos los campos!";
         mensaje1.style.color = "red";
+
+        mensaje.textContent = "¡Completa todos los campos!";
+        mensaje.style.color = "red";
+        return; 
     } 
 
     let yaExiste = false;
@@ -32,14 +37,22 @@ function registrar() {
     }
 }
 
-
-function iniciarSesion() {
+function iniciarSesion(){
     let user = document.getElementById("usuario").value;
     let contra = document.getElementById("contrasena").value;
+
     let mensaje2 = document.getElementById("mensaje2");
-    if (user === "" || contra === "") {
+    if (user === "" || contra === "") 
         mensaje2.textContent = "¡Ingresa tu usuario y contraseña!";
         mensaje2.style.color = "red";
+
+    let mensaje = document.getElementById("mensaje");
+
+    if (user === "" || contra === "") {
+        mensaje.textContent = "¡Ingresa tu usuario y contraseña!";
+        mensaje.style.color = "red";
+        return;
+
     } 
 
     let opcionesValidas = false;
